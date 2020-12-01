@@ -3,6 +3,8 @@ require('./bootstrap');
 require('moment');
 
 import Vue from 'vue';
+import Vuetify from 'vuetify';
+Vue.use(Vuetify);
 
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
@@ -23,4 +25,5 @@ new Vue({
                 resolveComponent: (name) => require(`./Pages/${name}`).default,
             },
         }),
+    vuetify: new Vuetify(),
 }).$mount(app);
